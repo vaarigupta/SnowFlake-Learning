@@ -16,8 +16,8 @@ public class SnowFlakeJDBC {
         Properties properties = new Properties();
 
         //setting properties
-        properties.put("user", "vaarigupta");
-        properties.put("password", "Codingislove@1");
+        properties.put("user", "<my-snowflake-user-id>");
+        properties.put("password", "<my-password>");
         properties.put("account", "wtlejzi-fv69824"); //account-id followed by cloud region.
         properties.put("warehouse", "COMPUTE_WH");
         properties.put("db", "TEST_DATA");
