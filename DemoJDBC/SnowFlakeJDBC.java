@@ -24,13 +24,13 @@ public class SnowFlakeJDBC {
         properties.put("schema", "PUBLIC");
         properties.put("role", "ACCOUNTADMIN");
 
-      //  https://wtlejzi-fv69824.snowflakecomputing.com
-        //change this below URL as per your snowflake instance
+         //https://wtlejzi-fv69824.snowflakecomputing.com
+        // snowflake JDBC URL
         String jdbcUrl = "jdbc:snowflake://wtlejzi-fv69824.snowflakecomputing.com/";
 
-        //change this select statement, but make sure the logic below is hard coded for now.
+        // select statement
         String selectSQL = "SELECT * FROM TEST_DATA.PUBLIC.Persons";
-        //"SELECT * FROM  TEST_DB.TEST_SCHEMA.Employees";
+
         //try-catch block
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, properties);
@@ -48,10 +48,6 @@ public class SnowFlakeJDBC {
                 System.out.println(" \tEmployee " + rs.getInt("PERSONID") +  ": "
                         + rs.getString("FIRSTNAME") + " " + rs.getString("LASTNAME")
                 + ", Age: " + rs.getInt("AGE"));
-    /*            System.out.println(" \tEmployee First: " + );
-                System.out.println(" \tEmployee Last: " + );
-                System.out.println(" \tEmployee Age: " + rs.getInt("AGE"));
-                System.out.println(); */
             }
 
             System.out.println("\t----------------------------------------");
